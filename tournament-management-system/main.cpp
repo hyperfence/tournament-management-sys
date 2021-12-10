@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Player.h"
 #include "Team.h"
+#include "DBHandler.h"
 
 using namespace std;
 
@@ -18,4 +19,8 @@ int main()
 	team.removePlayer(3);
 	team.displayPlayers();
 	player.displayDetails();
+
+	DBHandler test;
+
+	return 0;
 }
