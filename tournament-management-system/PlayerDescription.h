@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+
 using namespace std;
 
 struct PlayerDescription
@@ -9,4 +10,3 @@ struct PlayerDescription
 	string email;
 	string password;
 };
-

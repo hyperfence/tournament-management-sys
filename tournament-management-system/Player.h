@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "PlayerDescription.h"
+#include "DBHandler.h"
 
 using namespace std;
 
@@ -11,7 +12,7 @@ private:
 public:
 	Player();
 	Player(int id, string name, string email, string password);
-	PlayerDescription getPlayer(int id);
+	PlayerDescription getPlayer(int id, sql::Connection* con);
 	PlayerDescription getCurrentPlayer();
 	void displayDetails();
 };

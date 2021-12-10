@@ -7,8 +7,12 @@ using namespace std;
 
 int main()
 {
-	Player player(1, "Hammad", "hammad@nu.edu.pk", "123");
-	Team team(1, "Hammad's Team", 3);
+
+	DBHandler db;
+	db.establishConnection();
+
+	Player player(3, "Hammad", "hammad@nu.edu.pk", "123");
+	Team team(3, "Hammad's Team", 3);
 	team.addPlayer(1);
 	team.addPlayer(2);
 	team.addPlayer(3);
@@ -19,8 +23,7 @@ int main()
 	team.removePlayer(3);
 	team.displayPlayers();
 	player.displayDetails();
-
-	DBHandler test;
-
+	player.getPlayer(1, db.getCon());
+	player.displayDetails();
 	return 0;
 }

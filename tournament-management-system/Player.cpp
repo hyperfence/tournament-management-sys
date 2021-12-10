@@ -10,6 +10,17 @@ Player::Player(int id, string name, string email, string pass)
 	this->player.email = email;
 	this->player.password = pass;
 }
+PlayerDescription Player::getPlayer(int id, sql::Connection* con = NULL)
+{
+	if (this->player.id == id)
+	{
+		return this->player;
+	}
+	else
+	{
+		 return this->player = DBHandler::getPlayer(id, con);
+	}
+}
 void Player::displayDetails()
 {
 	cout << "************ Player Details ************" << endl;
