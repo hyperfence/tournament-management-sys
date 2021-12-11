@@ -73,7 +73,27 @@ bool DBHandler::addPlayer(int playerID, int teamID, sql::Connection* con)
 	{
 		string sql = "INSERT INTO team_player (team_id, player_id) VALUES (" + to_string(teamID) + "," + to_string(playerID) + ")";
 		stmt = con->createStatement();
-		res = stmt->executeQuery(sql);
+		stmt->execute(sql);
+	}
+	catch (sql::SQLException& e)
+	{
+		result = false;
+		cout << "ERROR: SQLException in " << __FILE__;
+		cout << "(" << __FUNCTION__ << ") on line " << __LINE__ << endl;
+		cout << "ERROR: " << e.what();
+		cout << " (MySQL error code: " << e.getErrorCode();
+		cout << ", SQLState: " << e.getSQLState() << " )" << endl;
+	}
+	return result;
+}
+bool DBHandler::removePlayer(int playerID, int teamID, sql::Connection* con)
+{
+	bool result = true;
+	try
+	{
+		string sql = "DELETE FROM team_player WHERE team_id = " + to_string(teamID) + " AND player_id = " + to_string(playerID);
+		stmt = con->createStatement();
+		stmt->execute(sql);
 	}
 	catch (sql::SQLException& e)
 	{

@@ -34,7 +34,6 @@ void Team::addPlayer(int playerID, sql::Connection * con)
 		{	
 			if (DBHandler::addPlayer(playerID, this->team.id, con))
 			{
-				cout << "Inside the function!" << endl;
 				this->team.playerIDs.emplace_back(playerID);
 			}	
 		}
@@ -57,11 +56,14 @@ TeamDescription Team::getTeam(int id, sql::Connection* con = NULL)
 		return team;
 	}
 }
-void Team::removePlayer(int playerID)
+void Team::removePlayer(int playerID, sql::Connection* con)
 {
 	if ((std::find(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerID) != this->team.playerIDs.end()))
 	{
-		this->team.playerIDs.erase(std::remove(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerID), this->team.playerIDs.end());
+		if (DBHandler::removePlayer(playerID, this->team.id, con))
+		{
+			this->team.playerIDs.erase(std::remove(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerID), this->team.playerIDs.end());
+		}
 	}
 }
 

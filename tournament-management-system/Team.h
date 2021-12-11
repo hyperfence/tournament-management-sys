@@ -16,8 +16,8 @@ public:
 	int getTotalPlayers();
 	void displayDetails();
 	void createTeam(int playerID, string name, int totalPlayers);
-	void addPlayer(int playerID, sql::Connection * con);
-	void removePlayer(int playerID);
+	void addPlayer(int playerID, sql::Connection* con);
+	void removePlayer(int playerID, sql::Connection* con);
 	void displayPlayers();
 };
 

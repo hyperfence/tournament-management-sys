@@ -21,8 +21,7 @@ int main()
 
 	team.addPlayer(1, db.getCon());
 	team.addPlayer(2, db.getCon());
-	team.addPlayer(3, db.getCon());
-	team.addPlayer(4, db.getCon());
+	team.removePlayer(1, db.getCon());
 
 	team.displayDetails();
 	return 0;

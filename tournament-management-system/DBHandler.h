@@ -32,6 +32,7 @@ public:
 	static TeamDescription getTeam(int id, sql::Connection* con);
 	static PlayerDescription getPlayer(int id, sql::Connection* con);
 	static bool addPlayer(int playerID, int teamID, sql::Connection * con);
+	static bool removePlayer(int playerID, int teamID, sql::Connection* con);
 	void closeConnection();
 	~DBHandler()
 	{
