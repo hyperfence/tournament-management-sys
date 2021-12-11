@@ -9,6 +9,7 @@
 #include "Team.h"
 #include "Player.h"
 
+
 using namespace std;
 
 class DBHandler
@@ -30,6 +31,7 @@ public:
 	void syncTeam(TeamDescription team);
 	static TeamDescription getTeam(int id, sql::Connection* con);
 	static PlayerDescription getPlayer(int id, sql::Connection* con);
+	static bool addPlayer(int playerID, int teamID, sql::Connection * con);
 	void closeConnection();
 	~DBHandler()
 	{

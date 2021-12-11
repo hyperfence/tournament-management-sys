@@ -26,13 +26,17 @@ void Team::createTeam(int playerID, string name, int totalPlayers)
 	this->team.totalPlayers = totalPlayers;
 }
 
-void Team::addPlayer(int playerID)
+void Team::addPlayer(int playerID, sql::Connection * con)
 {
 	if (this->team.playerIDs.size() < this->team.totalPlayers)
 	{
 		if (!(std::find(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerID) != this->team.playerIDs.end()))
-		{
-			this->team.playerIDs.emplace_back(playerID);
+		{	
+			if (DBHandler::addPlayer(playerID, this->team.id, con))
+			{
+				cout << "Inside the function!" << endl;
+				this->team.playerIDs.emplace_back(playerID);
+			}	
 		}
 	}
 	else
@@ -41,7 +45,7 @@ void Team::addPlayer(int playerID)
 	}
 
 }
-TeamDescription Team::getTeam(int id)
+TeamDescription Team::getTeam(int id, sql::Connection* con = NULL)
 {
 	if (this->team.id == id)
 	{
@@ -49,8 +53,8 @@ TeamDescription Team::getTeam(int id)
 	}
 	else
 	{
-		// Query the new team from DB and update the current team object.
-		return this->team;
+		this->team = DBHandler::getTeam(id, con);
+		return team;
 	}
 }
 void Team::removePlayer(int playerID)
@@ -67,4 +71,14 @@ void Team::displayPlayers()
 	{
 		cout << this->team.playerIDs[i] << endl;
 	}
+}
+void Team::displayDetails()
+{
+	cout << "************** Team Details **************" << endl;
+	cout << "Team ID: " << team.id << endl;
+	cout << "Lead ID: " << team.leadID << endl;
+	cout << "Team Name: " << team.name << endl;
+	cout << "Team Players: " << endl;
+	displayPlayers();
+	cout << "******************************************" << endl;
 }

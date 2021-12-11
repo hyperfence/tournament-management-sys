@@ -11,19 +11,19 @@ int main()
 	DBHandler db;
 	db.establishConnection();
 
-	Player player(3, "Hammad", "hammad@nu.edu.pk", "123");
-	Team team(3, "Hammad's Team", 3);
-	team.addPlayer(1);
-	team.addPlayer(2);
-	team.addPlayer(3);
-	team.addPlayer(4);
+	Player player;
+	Team team;
 
-	team.displayPlayers();
-	
-	team.removePlayer(3);
-	team.displayPlayers();
-	player.displayDetails();
 	player.getPlayer(1, db.getCon());
 	player.displayDetails();
+
+	team.getTeam(1, db.getCon());
+
+	team.addPlayer(1, db.getCon());
+	team.addPlayer(2, db.getCon());
+	team.addPlayer(3, db.getCon());
+	team.addPlayer(4, db.getCon());
+
+	team.displayDetails();
 	return 0;
 }

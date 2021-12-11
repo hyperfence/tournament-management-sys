@@ -11,10 +11,37 @@ void DBHandler::syncTeam(TeamDescription team)
 {
 
 }
-//TeamDescription DBHandler::getTeam(int id, sql::Connection* con)
-//{
-//
-//}
+TeamDescription DBHandler::getTeam(int id, sql::Connection* con)
+{
+	TeamDescription team;
+	try
+	{
+		string sql = "SELECT * FROM team WHERE id = " + to_string(id);
+		DBHandler::stmt = con->createStatement();
+		DBHandler::res = DBHandler::stmt->executeQuery(sql);
+		DBHandler::res->next();
+		team.id = id;
+		team.name = DBHandler::res->getString("name");
+		team.leadID = DBHandler::res->getInt("leadID");
+
+		sql = "SELECT * FROM team_player WHERE team_id = " + to_string(id);
+		DBHandler::stmt = con->createStatement();
+		DBHandler::res = DBHandler::stmt->executeQuery(sql);
+		while (DBHandler::res->next()) {
+			team.playerIDs.emplace_back(DBHandler::res->getInt("player_id"));
+		}
+	}
+	catch (sql::SQLException& e)
+	{
+		cout << "ERROR: SQLException in " << __FILE__;
+		cout << "(" << __FUNCTION__ << ") on line " << __LINE__ << endl;
+		cout << "ERROR: " << e.what();
+		cout << " (MySQL error code: " << e.getErrorCode();
+		cout << ", SQLState: " << e.getSQLState() << " )" << endl;
+	}
+
+	return team;
+}
 PlayerDescription DBHandler::getPlayer(int id, sql::Connection* con)
 {
 	PlayerDescription player;
@@ -38,6 +65,26 @@ PlayerDescription DBHandler::getPlayer(int id, sql::Connection* con)
 		cout << ", SQLState: " << e.getSQLState() << " )" << endl;
 	}
 	return player;
+}
+bool DBHandler::addPlayer(int playerID, int teamID, sql::Connection* con)
+{
+	bool result = true;
+	try
+	{
+		string sql = "INSERT INTO team_player (team_id, player_id) VALUES (" + to_string(teamID) + "," + to_string(playerID) + ")";
+		stmt = con->createStatement();
+		res = stmt->executeQuery(sql);
+	}
+	catch (sql::SQLException& e)
+	{
+		result = false;
+		cout << "ERROR: SQLException in " << __FILE__;
+		cout << "(" << __FUNCTION__ << ") on line " << __LINE__ << endl;
+		cout << "ERROR: " << e.what();
+		cout << " (MySQL error code: " << e.getErrorCode();
+		cout << ", SQLState: " << e.getSQLState() << " )" << endl;
+	}
+	return result;
 }
 void DBHandler::establishConnection()
 {
