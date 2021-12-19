@@ -9,11 +9,11 @@ class Player
 {
 private:
 	PlayerDescription player;
+
 public:
 	Player();
 	Player(int id, string name, string email, string password);
-	PlayerDescription getPlayer(int id, sql::Connection* con);
-	PlayerDescription getCurrentPlayer();
+	PlayerDescription getPlayer(int id);
 	void displayDetails();
 };
 

@@ -1,8 +1,6 @@
 #include "Player.h"
 
-Player::Player()
-{
-}
+Player::Player() {}
 Player::Player(int id, string name, string email, string pass)
 {
 	this->player.id = id;
@@ -10,7 +8,7 @@ Player::Player(int id, string name, string email, string pass)
 	this->player.email = email;
 	this->player.password = pass;
 }
-PlayerDescription Player::getPlayer(int id, sql::Connection* con = NULL)
+PlayerDescription Player::getPlayer(int id)
 {
 	if (this->player.id == id)
 	{
@@ -18,7 +16,7 @@ PlayerDescription Player::getPlayer(int id, sql::Connection* con = NULL)
 	}
 	else
 	{
-		 return this->player = DBHandler::getPlayer(id, con);
+		 return this->player = DBHandler::getPlayer(id);
 	}
 }
 void Player::displayDetails()
@@ -29,5 +27,4 @@ void Player::displayDetails()
 	cout << "Email: " << this->player.email << endl;
 	cout << "Password: " << this->player.password << endl;
 	cout << "****************************************" << endl;
-	;
 }

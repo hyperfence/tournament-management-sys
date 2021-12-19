@@ -7,22 +7,20 @@ using namespace std;
 
 int main()
 {
-
 	DBHandler db;
 	db.establishConnection();
 
 	Player player;
 	Team team;
 
-	player.getPlayer(1, db.getCon());
+	player.getPlayer(3);
 	player.displayDetails();
 
-	team.getTeam(1, db.getCon());
-
-	team.addPlayer(1, db.getCon());
-	team.addPlayer(2, db.getCon());
-	team.removePlayer(1, db.getCon());
-
+	team.getTeam(1);
+	team.addPlayer(1);
+	team.addPlayer(2);
+	team.removePlayer(2);
 	team.displayDetails();
+
 	return 0;
 }

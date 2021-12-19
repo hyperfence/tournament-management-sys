@@ -1,4 +1,18 @@
 #include "Invitation.h"
 
-vector <int> getInvitations(int playerID, int teamID);
-void sendInvitation(int senderID, int receiverID, int teamID);
+InviteList* Invitation::getInvites(int playerID)
+{
+	return nullptr;
+}
+void Invitation::sendInvite(int senderID, int receiverID, int teamID)
+{
+
+}
+void Invitation::acceptInvite(int inviteID)
+{
+
+}
+void Invitation::rejectInvite(int inviteID)
+{
+
+}

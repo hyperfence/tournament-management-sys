@@ -33,6 +33,9 @@
     <ClInclude Include="Invitation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ErrorHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Invitation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,14 +2,30 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "DBHandler.h"
+
 using namespace std;
+
+struct InviteList
+{
+	int inviteID;
+	int teamID;
+	InviteList* next;
+};
 
 class Invitation
 {
+private:
+	InviteList* invites;
+
 public:
-	vector <int> getInvitations(int playerID);
-	void sendInvitation(int senderID, int receiverID, int teamID);
-	void acceptInvitation(int invitationID);
-	void rejectInvitation(int invitationID);
+	Invitation()
+	{
+		invites = NULL;
+	}
+	InviteList* getInvites(int playerID);
+	void sendInvite(int senderID, int receiverID, int teamID);
+	void acceptInvite(int inviteID);
+	void rejectInvite(int inviteID);
 };
 

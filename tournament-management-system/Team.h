@@ -9,15 +9,16 @@ class Team
 {
 private:
 	TeamDescription team;
+
 public:
 	Team();
 	Team(int id, string name, int totalPlayers);
-	TeamDescription getTeam(int id, sql::Connection* con);
+	TeamDescription getTeam(int id);
 	int getTotalPlayers();
 	void displayDetails();
-	void createTeam(int playerID, string name, int totalPlayers);
-	void addPlayer(int playerID, sql::Connection* con);
-	void removePlayer(int playerID, sql::Connection* con);
+	void createTeam(int playerId, string name, int totalPlayers);
+	void addPlayer(int playerId);
+	void removePlayer(int playerId);
 	void displayPlayers();
 };
 

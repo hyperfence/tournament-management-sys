@@ -13,28 +13,27 @@ Team::Team(int id, string name, int totalPlayers)
 	this->team.name = name;
 	this->team.totalPlayers = totalPlayers;
 }
-
 int Team::getTotalPlayers()
 {
 	return this->team.totalPlayers;
 }
 
-void Team::createTeam(int playerID, string name, int totalPlayers)
+void Team::createTeam(int playerId, string name, int totalPlayers)
 {
-	this->team.leadID = playerID;
+	this->team.leadID = playerId;
 	this->team.name = name;
 	this->team.totalPlayers = totalPlayers;
 }
 
-void Team::addPlayer(int playerID, sql::Connection * con)
+void Team::addPlayer(int playerId)
 {
 	if (this->team.playerIDs.size() < this->team.totalPlayers)
 	{
-		if (!(std::find(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerID) != this->team.playerIDs.end()))
+		if (!(std::find(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerId) != this->team.playerIDs.end()))
 		{	
-			if (DBHandler::addPlayer(playerID, this->team.id, con))
+			if (DBHandler::addPlayer(playerId, this->team.id))
 			{
-				this->team.playerIDs.emplace_back(playerID);
+				this->team.playerIDs.emplace_back(playerId);
 			}	
 		}
 	}
@@ -44,7 +43,7 @@ void Team::addPlayer(int playerID, sql::Connection * con)
 	}
 
 }
-TeamDescription Team::getTeam(int id, sql::Connection* con = NULL)
+TeamDescription Team::getTeam(int id)
 {
 	if (this->team.id == id)
 	{
@@ -52,17 +51,17 @@ TeamDescription Team::getTeam(int id, sql::Connection* con = NULL)
 	}
 	else
 	{
-		this->team = DBHandler::getTeam(id, con);
+		this->team = DBHandler::getTeam(id);
 		return team;
 	}
 }
-void Team::removePlayer(int playerID, sql::Connection* con)
+void Team::removePlayer(int playerId)
 {
-	if ((std::find(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerID) != this->team.playerIDs.end()))
+	if ((std::find(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerId) != this->team.playerIDs.end()))
 	{
-		if (DBHandler::removePlayer(playerID, this->team.id, con))
+		if (DBHandler::removePlayer(playerId, this->team.id))
 		{
-			this->team.playerIDs.erase(std::remove(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerID), this->team.playerIDs.end());
+			this->team.playerIDs.erase(std::remove(this->team.playerIDs.begin(), this->team.playerIDs.end(), playerId), this->team.playerIDs.end());
 		}
 	}
 }
