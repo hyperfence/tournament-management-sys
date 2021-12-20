@@ -147,7 +147,11 @@
   <ItemGroup>
     <ClInclude Include="DBHandler.h" />
     <ClInclude Include="ErrorHandler.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameDescription.h" />
     <ClInclude Include="Invitation.h" />
+    <ClInclude Include="Match.h" />
+    <ClInclude Include="MatchDescription.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerDescription.h" />
     <ClInclude Include="Team.h" />
@@ -156,8 +160,10 @@
   <ItemGroup>
     <ClCompile Include="DBHandler.cpp" />
     <ClCompile Include="ErrorHandler.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Invitation.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Match.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Team.cpp" />
   </ItemGroup>

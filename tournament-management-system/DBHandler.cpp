@@ -60,7 +60,7 @@ PlayerDescription DBHandler::getPlayer(int id)
 	PlayerDescription player;
 	try
 	{
-		string sql = "SELECT * FROM player WHERE id = "+to_string(id);
+		string sql = "SELECT * FROM player WHERE id = " + to_string(id);
 		DBHandler::stmt = DBHandler::con->createStatement();
 		DBHandler::res = DBHandler::stmt->executeQuery(sql);
 		DBHandler::res->next();
@@ -113,6 +113,27 @@ bool DBHandler::removePlayer(int playerID, int teamID)
 		error.logError();
 	}
 	return result;
+}
+GameDescription DBHandler::getGameDB(int id)
+{
+	GameDescription game;
+	try
+	{
+		string sql = "SELECT * FROM game WHERE id = " + to_string(id);
+		DBHandler::stmt = DBHandler::con->createStatement();
+		DBHandler::res = DBHandler::stmt->executeQuery(sql);
+		DBHandler::res->next();
+		game.id = id;
+		game.name = DBHandler::res->getString("name");
+		game.category = DBHandler::res->getString("category");
+	}
+	catch (sql::SQLException& e)
+	{
+		ErrorHandler error;
+		error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
+		error.logError();
+	}
+	return game;
 }
 bool DBHandler::sendInvite(int senderID, int receiverID, int teamID)
 {

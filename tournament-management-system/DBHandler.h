@@ -10,6 +10,7 @@
 #include "Team.h"
 #include "Player.h"
 #include "Invitation.h"
+#include "GameDescription.h"
 
 using namespace std;
 
@@ -23,7 +24,7 @@ private:
 	static sql::Driver* driver;
 	static sql::Connection* con;
 	static sql::Statement* stmt;
-	static sql::ResultSet* res; 
+	static sql::ResultSet* res;
 	static bool isLoading;
 
 public:
@@ -52,6 +53,9 @@ public:
 	//InviteList* getInvites(int playerId);
 	static bool sendInvite(int senderId, int receiverId, int teamId);
 	static bool updateInvite(int inviteId, int action); // Action 0 = Rejected && Action 1 = Accepted
+
+	static GameDescription getGameDB(int id);
 	~DBHandler();
 };
+
 
