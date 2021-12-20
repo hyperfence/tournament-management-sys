@@ -1,4 +1,9 @@
 #pragma once
+#ifdef _DEBUG
+	#define IS_DEBUG true
+#else
+	#define IS_DEBUG false
+#endif
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -22,6 +27,5 @@ public:
 	ErrorHandler();
 	void setError(int line, int code, string source, string file, string desc, string state);
 	void logError();
-	void displayError();
 	~ErrorHandler();
 };

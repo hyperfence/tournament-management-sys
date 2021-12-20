@@ -25,7 +25,6 @@ void DBHandler::establishConnection()
 		ErrorHandler error;
 		error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
 		error.logError();
-		error.displayError();
 	}
 }
 TeamDescription DBHandler::getTeam(int id)
@@ -53,7 +52,6 @@ TeamDescription DBHandler::getTeam(int id)
 		ErrorHandler error;
 		error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
 		error.logError();
-		error.displayError();
 	}
 	return team;
 }
@@ -76,7 +74,6 @@ PlayerDescription DBHandler::getPlayer(int id)
 		ErrorHandler error;
 		error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
 		error.logError();
-		error.displayError();
 	}
 	return player;
 }
@@ -96,7 +93,6 @@ bool DBHandler::addPlayer(int playerID, int teamID)
 		ErrorHandler error;
 		error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
 		error.logError();
-		error.displayError();
 	}
 	return result;
 }
@@ -111,12 +107,10 @@ bool DBHandler::removePlayer(int playerID, int teamID)
 	}
 	catch (sql::SQLException& e)
 	{
-		// Error Handling Here
 		result = false;
 		ErrorHandler error;
 		error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
 		error.logError();
-		error.displayError();
 	}
 	return result;
 }
@@ -125,7 +119,7 @@ bool DBHandler::sendInvite(int senderID, int receiverID, int teamID)
 	bool result = true;
 	try
 	{
-		string sql = "INSERT INTO invite (team_id, sender_id, receiver_id) VALUES (" + to_string(teamID) + ", " + to_string(senderID) + ", " + to_string(receiverID) + ")";
+		string sql = "INSERT INTO invitation (team_id, sender_id, receiver_id) VALUES (" + to_string(teamID) + ", " + to_string(senderID) + ", " + to_string(receiverID) + ")";
 		DBHandler::stmt = DBHandler::con->createStatement();
 		DBHandler::stmt->execute(sql);
 	}
@@ -135,7 +129,6 @@ bool DBHandler::sendInvite(int senderID, int receiverID, int teamID)
 		ErrorHandler error;
 		error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
 		error.logError();
-		error.displayError();
 	}
 	return result;
 }
@@ -143,19 +136,71 @@ bool DBHandler::updateInvite(int inviteID, int action)
 {
 	bool result = true;
 	string sql = "";
+	int playerId = 0;
+	int teamId = 0;
 	if (action == 0)
 	{
-		sql = "DELETE FROM invites WHERE id = "+to_string(inviteID);
+		try
+		{
+			sql = "DELETE FROM invitation WHERE id = " + to_string(inviteID);
+			DBHandler::stmt = DBHandler::con->createStatement();
+			DBHandler::stmt->execute(sql);
+		}
+		catch (sql::SQLException& e)
+		{
+			result = false;
+			ErrorHandler error;
+			error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
+			error.logError();
+		}
 	}
 	else if (action == 1)
 	{
-		sql = "SELECT * FROM invites WHERE id = " + to_string(inviteID);
-
-		sql = "INSERT INTO team_player (team_id, player_id) VALUES ()";
+		try
+		{
+			sql = "SELECT * FROM invitation WHERE id = " + to_string(inviteID);
+			DBHandler::stmt = DBHandler::con->createStatement();
+			DBHandler::res = DBHandler::stmt->executeQuery(sql);
+			DBHandler::res->next();
+			playerId = res->getInt("receiver_id");
+			teamId = res->getInt("team_id");
+		}
+		catch (sql::SQLException& e)
+		{
+			ErrorHandler error;
+			error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
+			error.logError();
+			return false;
+		}
+		try
+		{
+			sql = "INSERT INTO team_player (team_id, player_id) VALUES (" + to_string(teamId) + ", " + to_string(playerId) + ")";
+			DBHandler::stmt = DBHandler::con->createStatement();
+			DBHandler::stmt->execute(sql);
+		}
+		catch (sql::SQLException& e)
+		{
+			ErrorHandler error;
+			error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
+			error.logError();
+			return false;
+		}
+		try
+		{
+			sql = "DELETE FROM invitation WHERE id = " + to_string(inviteID);
+			DBHandler::stmt = DBHandler::con->createStatement();
+			DBHandler::stmt->execute(sql);
+		}
+		catch (sql::SQLException& e)
+		{
+			ErrorHandler error;
+			error.setError(__LINE__, e.getErrorCode(), "MySQL", __FILE__, e.what(), e.getSQLState());
+			error.logError();
+		}
 	}
 	else
 	{
-		return false;
+		result = false;
 	}
 	return result;
 }
