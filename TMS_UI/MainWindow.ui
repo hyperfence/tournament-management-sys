@@ -1,0 +1,1831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>710</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#centralWidget {
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(137, 247, 254), stop:1 rgb(102, 166, 255));
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="minimumSize">
+       <size>
+        <width>689</width>
+        <height>457</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>691</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(0,0,0,0);</string>
+      </property>
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <widget class="QWidget" name="Login">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>170</y>
+          <width>291</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #fff;
+border-radius: 15px;
+</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="6" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="loginBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border: 3px solid #2196f3;
+	background-color: #2196F3;
+	color: #fff;
+	font-weight: 600;
+	padding: 2.5px 25px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.2s linear;
+	margin-bottom: 30px;
+}
+QPushButton:hover {
+	background-color: #fff;
+	color: #2196F3;
+}</string>
+           </property>
+           <property name="text">
+            <string>Login</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="inpLoginEmail">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	background-color: #fff;
+	height: 20px;
+	padding: 5px 10px;
+	border: 2px solid #2196F3;
+	border-radius: 15px;
+	margin: 0px 20px;
+	width: 180px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="inpLoginPass">
+           <property name="styleSheet">
+            <string notr="true">background-color: #fff;
+height: 20px;
+padding: 5px 10px;
+border: 2px solid #2196F3;
+border-radius: 15px;
+margin: 0px 20px;
+width: 180px;
+margin-bottom: 10px;</string>
+           </property>
+           <property name="text">
+            <string>Password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+          <widget class="QLabel" name="label">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+	font-size: 22px;
+	font-weight: 600;
+}</string>
+           </property>
+           <property name="text">
+            <string>Login</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_Welcome">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>50</y>
+          <width>371</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 24px;
+font-weight: 600;</string>
+        </property>
+        <property name="text">
+         <string>Tournament Management System</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>460</y>
+          <width>291</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="styleSheet">
+            <string notr="true">font-size: 16px;
+font-weight: 600;</string>
+           </property>
+           <property name="text">
+            <string>Don't have an account?</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="toSignupBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border: 2px solid #fff;
+	background-color: #F4511E;
+	color: #fff;
+	font-weight: 600;
+	padding: 3px 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	border: 2px solid #F4511E;
+	background-color: #fff;
+	color: #F4511E;
+}</string>
+           </property>
+           <property name="text">
+            <string>Register</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Signup">
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>170</y>
+          <width>291</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #fff;
+border-radius: 15px;
+</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="6" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="signupBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border: 3px solid #2196f3;
+	background-color: #2196F3;
+	color: #fff;
+	font-weight: 600;
+	padding: 2.5px 25px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.2s linear;
+	margin-bottom: 10px;
+}
+QPushButton:hover {
+	background-color: #fff;
+	color: #2196F3;
+}</string>
+           </property>
+           <property name="text">
+            <string>Signup</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="inpRegPass">
+           <property name="styleSheet">
+            <string notr="true">background-color: #fff;
+height: 20px;
+padding: 5px 10px;
+border: 2px solid #2196F3;
+border-radius: 15px;
+margin: 0px 20px;
+width: 180px;
+margin-bottom: 10px;</string>
+           </property>
+           <property name="text">
+            <string>Password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="inpRegEmail">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	background-color: #fff;
+	height: 20px;
+	padding: 5px 10px;
+	border: 2px solid #2196F3;
+	border-radius: 15px;
+	margin: 0px 20px;
+	width: 180px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_4">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+	font-size: 22px;
+	font-weight: 600;
+}</string>
+           </property>
+           <property name="text">
+            <string>Signup</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" alignment="Qt::AlignHCenter">
+          <widget class="QLineEdit" name="inpRegName">
+           <property name="styleSheet">
+            <string notr="true">background-color: #fff;
+height: 20px;
+padding: 5px 10px;
+border: 2px solid #2196F3;
+border-radius: 15px;
+margin: 0px 20px;
+width: 180px;</string>
+           </property>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_Welcome_2">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>50</y>
+          <width>371</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 24px;
+font-weight: 600;</string>
+        </property>
+        <property name="text">
+         <string>Tournament Management System</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>470</y>
+          <width>291</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="styleSheet">
+            <string notr="true">font-size: 16px;
+font-weight: 600;</string>
+           </property>
+           <property name="text">
+            <string>Already have an account?</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="toLoginBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border: 2px solid #fff;
+	background-color: #F4511E;
+	color: #fff;
+	font-weight: 600;
+	padding: 3px 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
+QPushButton:hover {
+	border: 2px solid #F4511E;
+	background-color: #fff;
+	color: #F4511E;
+}</string>
+           </property>
+           <property name="text">
+            <string>Login</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Home">
+       <widget class="QGroupBox" name="SideMenu1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>121</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">margin: 0px;
+border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="homeBtn">
+           <property name="styleSheet">
+            <string notr="true">background-color: #FF5722;
+color: #fff;
+font-weight: 600;
+border: none;
+padding: 7.5px 5px;
+text-align: left;
+border: 2px solid #FF5722;</string>
+           </property>
+           <property name="text">
+            <string>Home</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="teamsBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Teams</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="matchesBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Matches</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="tournamentsBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Tournaments</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="ContentBox1">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>581</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QTabWidget" name="tabWidget1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>571</width>
+           <height>541</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;</string>
+         </property>
+         <property name="tabPosition">
+          <enum>QTabWidget::North</enum>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="HomeTab1">
+          <attribute name="title">
+           <string>General</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="HomeTab2">
+          <attribute name="title">
+           <string>Profile</string>
+          </attribute>
+          <widget class="QLabel" name="label_5">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>176</y>
+             <width>49</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: 600;
+font-size: 16px;</string>
+           </property>
+           <property name="text">
+            <string>Name:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>230</y>
+             <width>61</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: 600;
+font-size: 16px;</string>
+           </property>
+           <property name="text">
+            <string>Email:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_7">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>205</y>
+             <width>49</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: 600;
+font-size: 16px;</string>
+           </property>
+           <property name="text">
+            <string>Status:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_8">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>170</y>
+             <width>91</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="MainWindow.qrc">:/MainWindow/user.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_15">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>40</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:  #2196f3;
+font-weight: 600;
+font-size: 20px;</string>
+           </property>
+           <property name="text">
+            <string>My Profile</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="loginBtn_2">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>380</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border: 3px solid #2196f3;
+	background-color: #2196F3;
+	color: #fff;
+	font-weight: 600;
+	padding: 2.5px 25px;
+	font-size: 16px;
+}
+QPushButton:hover {
+	background-color: #fff;
+	color: #2196F3;
+}</string>
+           </property>
+           <property name="text">
+            <string>Logout</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_16">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>175</y>
+             <width>261</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: 600;
+font-size: 16px;
+color: #fb1963;</string>
+           </property>
+           <property name="text">
+            <string>Malik Talha</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_17">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>200</y>
+             <width>261</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: 600;
+font-size: 16px;
+color: #fb1963;</string>
+           </property>
+           <property name="text">
+            <string>Player</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_18">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>230</y>
+             <width>261</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: 600;
+font-size: 16px;
+color: #fb1963;</string>
+           </property>
+           <property name="text">
+            <string>talha@nu.edu.pk</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Teams">
+       <widget class="QGroupBox" name="ContentBox2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>581</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QTabWidget" name="tabWidget2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>571</width>
+           <height>541</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;</string>
+         </property>
+         <property name="tabPosition">
+          <enum>QTabWidget::North</enum>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="TeamsTab1">
+          <attribute name="title">
+           <string>My Teams</string>
+          </attribute>
+          <widget class="QLabel" name="label_24">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>30</y>
+             <width>91</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="MainWindow.qrc">:/MainWindow/team.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_25">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>30</y>
+             <width>101</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: #FF5722;
+font-weight: 600;
+font-size: 20px;</string>
+           </property>
+           <property name="text">
+            <string>My Teams</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_26">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>70</y>
+             <width>261</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 13px;</string>
+           </property>
+           <property name="text">
+            <string>The teams you have joined are listed below.</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="TeamsTab2">
+          <attribute name="title">
+           <string>Invites</string>
+          </attribute>
+          <widget class="QLabel" name="label_19">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>120</y>
+             <width>121</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:  #2196f3;
+font-weight: 600;
+font-size: 20px;</string>
+           </property>
+           <property name="text">
+            <string>Send Invite</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_20">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>300</y>
+             <width>121</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:  #2196f3;
+font-weight: 600;
+font-size: 20px;</string>
+           </property>
+           <property name="text">
+            <string>My Invites</string>
+           </property>
+          </widget>
+          <widget class="Line" name="line">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>130</y>
+             <width>411</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:#2196f3;
+border-radius: 15px;
+</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="Line" name="line_2">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>310</y>
+             <width>411</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:#2196f3;
+border-radius: 15px;
+</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_21">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>20</y>
+             <width>61</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="MainWindow.qrc">:/MainWindow/invites.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_22">
+           <property name="geometry">
+            <rect>
+             <x>280</x>
+             <y>30</y>
+             <width>101</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: #FF5722;
+font-weight: 600;
+font-size: 20px;</string>
+           </property>
+           <property name="text">
+            <string>Invitations</string>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_12">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>150</y>
+             <width>331</width>
+             <height>111</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QGroupBox {
+	border: none;
+}</string>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QFormLayout" name="formLayout_4">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_31">
+              <property name="styleSheet">
+               <string notr="true">font-size: 14px;
+font-weight: 600;
+border: none;
+margin: 5px 10px;</string>
+              </property>
+              <property name="text">
+               <string>Player Email</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit_5">
+              <property name="styleSheet">
+               <string notr="true">border: 2px solid  #2196f3;
+border-radius: 15px;
+padding: 5px 10px;
+margin: 5px 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_35">
+              <property name="styleSheet">
+               <string notr="true">font-size: 14px;
+font-weight: 600;
+border: none;
+margin: 5px 10px;</string>
+              </property>
+              <property name="text">
+               <string>Team ID</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="spinBox_4">
+              <property name="styleSheet">
+               <string notr="true">border: 2px solid  #2196f3;
+border-radius: 15px;
+padding: 5px 10px;
+margin: 5px 10px;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QPushButton" name="createTeamBtn_2">
+           <property name="geometry">
+            <rect>
+             <x>250</x>
+             <y>260</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border: 3px solid #2196f3;
+	background-color: #2196F3;
+	color: #fff;
+	font-weight: 600;
+	padding: 2.5px 15px;
+	font-size: 16px;
+}
+QPushButton:hover {
+	background-color: #fff;
+	color: #2196F3;
+}</string>
+           </property>
+           <property name="text">
+            <string>Send</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="TeamsTab3">
+          <attribute name="title">
+           <string>Create Team</string>
+          </attribute>
+          <widget class="QLabel" name="label_27">
+           <property name="geometry">
+            <rect>
+             <x>270</x>
+             <y>50</y>
+             <width>121</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: #FF5722;
+font-weight: 600;
+font-size: 20px;</string>
+           </property>
+           <property name="text">
+            <string>Create Team</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_28">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>30</y>
+             <width>81</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="MainWindow.qrc">:/MainWindow/create_team.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_11">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>180</y>
+             <width>381</width>
+             <height>111</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QGroupBox {
+	border: none;
+}</string>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QFormLayout" name="formLayout_2">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_29">
+              <property name="styleSheet">
+               <string notr="true">font-size: 14px;
+font-weight: 600;
+border: none;
+margin: 5px 10px;</string>
+              </property>
+              <property name="text">
+               <string>Team Name</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit_4">
+              <property name="styleSheet">
+               <string notr="true">border: 2px solid  #2196f3;
+border-radius: 15px;
+padding: 5px 10px;
+margin: 5px 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_30">
+              <property name="styleSheet">
+               <string notr="true">font-size: 14px;
+font-weight: 600;
+border: none;
+margin: 5px 10px;</string>
+              </property>
+              <property name="text">
+               <string>Total Players</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="spinBox_2">
+              <property name="styleSheet">
+               <string notr="true">border: 2px solid  #2196f3;
+border-radius: 15px;
+padding: 5px 10px;
+margin: 5px 10px;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QPushButton" name="createTeamBtn">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>360</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border: 3px solid #2196f3;
+	background-color: #2196F3;
+	color: #fff;
+	font-weight: 600;
+	padding: 2.5px 15px;
+	font-size: 16px;
+}
+QPushButton:hover {
+	background-color: #fff;
+	color: #2196F3;
+}</string>
+           </property>
+           <property name="text">
+            <string>Create</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="SideMenu2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>121</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">margin: 0px;
+border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QPushButton" name="homeBtn_2">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Home</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="teamsBtn_2">
+           <property name="styleSheet">
+            <string notr="true">background-color: #FF5722;
+color: #fff;
+font-weight: 600;
+border: none;
+padding: 7.5px 5px;
+text-align: left;
+border: 2px solid #FF5722;</string>
+           </property>
+           <property name="text">
+            <string>Teams</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="matchesBtn_2">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Matches</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="tournamentsBtn_2">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Tournaments</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Matches">
+       <widget class="QGroupBox" name="ContentBox3">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>581</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QTabWidget" name="tabWidget3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>571</width>
+           <height>541</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;</string>
+         </property>
+         <property name="tabPosition">
+          <enum>QTabWidget::North</enum>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="MatchesTab1">
+          <attribute name="title">
+           <string>Upcoming Matches</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="MatchesTab2">
+          <attribute name="title">
+           <string>Past Matches</string>
+          </attribute>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="SideMenu3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>121</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">margin: 0px;
+border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QPushButton" name="homeBtn_3">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Home</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="teamsBtn_3">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Teams</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="matchesBtn_3">
+           <property name="styleSheet">
+            <string notr="true">background-color: #FF5722;
+color: #fff;
+font-weight: 600;
+border: none;
+padding: 7.5px 5px;
+text-align: left;
+border: 2px solid #FF5722;
+</string>
+           </property>
+           <property name="text">
+            <string>Matches</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="tournamentsBtn_3">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Tournaments</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Tournaments">
+       <widget class="QGroupBox" name="ContentBox4">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>581</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QTabWidget" name="tabWidget4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>571</width>
+           <height>541</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;</string>
+         </property>
+         <property name="tabPosition">
+          <enum>QTabWidget::North</enum>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="TournamentsTab1">
+          <attribute name="title">
+           <string>My Tournaments</string>
+          </attribute>
+          <widget class="QLabel" name="label_13">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>20</y>
+             <width>161</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:  #2196f3;
+font-weight: 600;
+font-size: 20px;</string>
+           </property>
+           <property name="text">
+            <string>My Tournaments</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_14">
+           <property name="geometry">
+            <rect>
+             <x>138</x>
+             <y>60</y>
+             <width>311</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Below are the tournaments in which you are participating.</string>
+           </property>
+          </widget>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>120</y>
+             <width>471</width>
+             <height>341</height>
+            </rect>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>471</width>
+              <height>341</height>
+             </rect>
+            </property>
+            <widget class="QGroupBox" name="groupBox_10">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>30</y>
+               <width>431</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLineEdit" name="lineEdit_3">
+                <property name="text">
+                 <string>My First Tournament</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FF5722;
+color: #fff;
+font-weight: 600;
+border: none;
+text-align: left;
+border: 2px solid #FF5722;</string>
+                </property>
+                <property name="text">
+                 <string>Leave</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="TournamentsTab2">
+          <attribute name="title">
+           <string>Create Tournament</string>
+          </attribute>
+          <widget class="QGroupBox" name="groupBox_9">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>150</y>
+             <width>381</width>
+             <height>151</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QGroupBox {
+	border: none;
+}</string>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="styleSheet">
+               <string notr="true">font-size: 14px;
+font-weight: 600;
+border: none;
+margin: 5px 10px;</string>
+              </property>
+              <property name="text">
+               <string>Tournament Title:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit">
+              <property name="styleSheet">
+               <string notr="true">border: 2px solid  #2196f3;
+border-radius: 15px;
+padding: 5px 10px;
+margin: 5px 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="styleSheet">
+               <string notr="true">font-size: 14px;
+font-weight: 600;
+border: none;
+margin: 5px 10px;</string>
+              </property>
+              <property name="text">
+               <string>Total Teams</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="spinBox">
+              <property name="styleSheet">
+               <string notr="true">border: 2px solid  #2196f3;
+border-radius: 15px;
+padding: 5px 10px;
+margin: 5px 10px;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_11">
+              <property name="styleSheet">
+               <string notr="true">font-size: 14px;
+font-weight: 600;
+border: none;
+margin: 5px 10px;</string>
+              </property>
+              <property name="text">
+               <string>Final Prize</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="lineEdit_2">
+              <property name="styleSheet">
+               <string notr="true">border: 2px solid  #2196f3;
+border-radius: 15px;
+padding: 5px 10px;
+margin: 5px 10px;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QLabel" name="label_12">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>60</y>
+             <width>251</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: #FF5722;
+font-weight: 600;
+font-size: 20px;</string>
+           </property>
+           <property name="text">
+            <string>Create a New Tournament</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="createTournamentBtn">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>350</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	border: 3px solid #2196f3;
+	background-color: #2196F3;
+	color: #fff;
+	font-weight: 600;
+	padding: 2.5px 15px;
+	font-size: 16px;
+}
+QPushButton:hover {
+	background-color: #fff;
+	color: #2196F3;
+}</string>
+           </property>
+           <property name="text">
+            <string>Create</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_23">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>30</y>
+             <width>91</width>
+             <height>91</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="MainWindow.qrc">:/MainWindow/tournament.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="SideMenu4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>121</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">margin: 0px;
+border: none;</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QPushButton" name="homeBtn_4">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Home</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="teamsBtn_4">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}</string>
+           </property>
+           <property name="text">
+            <string>Teams</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="matchesBtn_4">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	background-color: #FFF;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7.5px 5px;
+	text-align: left;
+	border: 2px solid #FF5722;
+	color: #FF5722;
+	margin: 0px;
+}
+QPushButton:hover {
+	background-color: #FF5722;
+	color: #FFF;	
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Matches</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="tournamentsBtn_4">
+           <property name="styleSheet">
+            <string notr="true">background-color: #FF5722;
+color: #fff;
+font-weight: 600;
+border: none;
+padding: 7.5px 5px;
+text-align: left;
+border: 2px solid #FF5722;</string>
+           </property>
+           <property name="text">
+            <string>Tournaments</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MainWindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

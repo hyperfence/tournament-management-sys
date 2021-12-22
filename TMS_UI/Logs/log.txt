@@ -1,0 +1,16 @@
+[2021-12-20|22:14:57][MySQL][Error#2013][State#HY000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:232]: Lost connection to MySQL server during query
+[2021-12-20|22:15:01][MySQL][Error#2013][State#HY000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:232]: Lost connection to MySQL server during query
+[2021-12-20|22:39:54][MySQL][Error#2013][State#HY000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Lost connection to MySQL server during query
+[2021-12-20|22:39:57][MySQL][Error#2013][State#HY000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:232]: Lost connection to MySQL server during query
+[2021-12-20|22:41:20][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:41:28][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:41:30][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:41:35][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:41:36][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:41:38][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:41:39][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:42:25][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:42:29][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:42:32][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:42:39][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'
+[2021-12-20|22:42:44][MySQL][Error#1062][State#23000][File:D:\VS Projects\C++\TMS_UI\TMS_UI\DBHandler.cpp][Line:250]: Duplicate entry 'Email' for key 'email'

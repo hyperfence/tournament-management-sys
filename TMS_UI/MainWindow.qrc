@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/MainWindow">
+        <file>gui.ico</file>
+        <file>splash.png</file>
+        <file>tournament.png</file>
+        <file>team.png</file>
+        <file>create_team.png</file>
+        <file>invites.png</file>
+        <file>user.png</file>
+    </qresource>
+</RCC>

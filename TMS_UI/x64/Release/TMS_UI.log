@@ -1,0 +1,8 @@
+﻿  Reading Qt configuration (C:/Qt/6.2.2/msvc2019_64/bin/qmake)
+  rcc MainWindow.qrc
+  moc MainWindow.h
+  MainWindow.cpp
+  main.cpp
+  qrc_MainWindow.cpp
+  moc_MainWindow.cpp
+  TMS_UI.vcxproj -> D:\VS Projects\C++\TMS_UI\x64\Release\TMS_UI.exe
