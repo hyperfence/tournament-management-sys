@@ -7,5 +7,18 @@
         <file>create_team.png</file>
         <file>invites.png</file>
         <file>user.png</file>
+        <file>match.png</file>
+        <file>menu_icon_4.png</file>
+        <file>menu_icon_1.png</file>
+        <file>menu_icon_2.png</file>
+        <file>menu_icon_3.png</file>
+        <file>send.png</file>
+        <file>add.png</file>
+        <file>logout.png</file>
+        <file>my_tournament.png</file>
+        <file>match2.png</file>
+        <file>history.png</file>
+        <file>esports.png</file>
+        <file>announcements.png</file>
     </qresource>
 </RCC>

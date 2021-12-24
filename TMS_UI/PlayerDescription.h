@@ -7,4 +7,5 @@ struct PlayerDescription
 	std::string name;
 	std::string email;
 	std::string password;
+	std::string status;
 };

@@ -3,6 +3,7 @@
 Player::Player() 
 {
 	this->player.id = 0;
+	this->player.status = "Player";
 }
 Player::Player(int id, std::string name, std::string email, std::string pass)
 {
@@ -10,6 +11,23 @@ Player::Player(int id, std::string name, std::string email, std::string pass)
 	this->player.name = name;
 	this->player.email = email;
 	this->player.password = pass;
+	this->player.status = "Player";
+}
+int Player::getId()
+{
+	return this->player.id;
+}
+std::string Player::getName()
+{
+	return this->player.name;
+}
+std::string Player::getEmail()
+{
+	return this->player.email;
+}
+std::string Player::getStatus()
+{
+	return this->player.status;
 }
 bool Player::login(std::string email, std::string pass)
 {
@@ -38,4 +56,12 @@ void Player::displayDetails()
 	std::cout << "Email: " << this->player.email << std::endl;
 	std::cout << "Password: " << this->player.password << std::endl;
 	std::cout << "****************************************" << std::endl;
+}
+void Player::logout()
+{
+	this->player.id = 0;
+	this->player.email = "";
+	this->player.name = "";
+	this->player.password = "";
+	this->player.status = "";
 }

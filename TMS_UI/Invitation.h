@@ -2,14 +2,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "InviteList.h"
 #include "DBHandler.h"
-
-struct InviteList
-{
-	int inviteID;
-	int teamID;
-	InviteList* next;
-};
 
 class Invitation
 {
@@ -21,8 +15,8 @@ public:
 	{
 		invites = NULL;
 	}
-	InviteList* getInvites(int playerID);
-	void sendInvite(int senderID, int receiverID, int teamID);
+	InviteList* getInvites(int playerID, int* count);
+	bool sendInvite(int senderID, std::string receiverEmail, int teamID);
 	void acceptInvite(int inviteID);
 	void rejectInvite(int inviteID);
 };

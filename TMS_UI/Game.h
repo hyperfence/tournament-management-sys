@@ -10,7 +10,7 @@ private:
 
 public:
 	Game();
-	Game(int id, std::string name, std::string category);
+	Game(int id, std::string name);
 	GameDescription getGame(int id);
 };
 

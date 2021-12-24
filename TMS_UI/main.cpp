@@ -7,12 +7,10 @@
 
 int main(int argc, char *argv[])
 {
-    DBHandler DB;
     QApplication app(argc, argv);
     QPixmap pixmap(":/MainWindow/splash.png");
     QSplashScreen splash(pixmap);
     splash.show();
-    DB.establishConnection();
     app.processEvents();
     QIcon icon(":/MainWindow/gui.ico");
     MainWindow win;

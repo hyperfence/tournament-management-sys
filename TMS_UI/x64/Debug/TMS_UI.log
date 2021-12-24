@@ -1,16 +1,2 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (TMS_UI.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Reading Qt configuration (C:/Qt/6.2.2/msvc2019_64/bin/qmake)
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (TMS_UI.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  rcc MainWindow.qrc
-  DBHandler.cpp
-  Game.cpp
-  Invitation.cpp
-  MainWindow.cpp
-  Match.cpp
-  Player.cpp
-  Team.cpp
-  Tournament.cpp
-  main.cpp
-  moc_MainWindow.cpp
-  qrc_MainWindow.cpp
+﻿  MainWindow.cpp
   TMS_UI.vcxproj -> D:\VS Projects\C++\TMS_UI\x64\Debug\TMS.exe

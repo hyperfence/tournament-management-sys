@@ -105,5 +105,8 @@
     <ClInclude Include="TournamentDescription.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InviteList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

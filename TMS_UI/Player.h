@@ -11,9 +11,14 @@ private:
 public:
 	Player();
 	Player(int id, std::string name, std::string email, std::string password);
+	int getId();
+	std::string getName();
+	std::string getEmail();
+	std::string getStatus();
 	bool login(std::string email, std::string pass);
 	bool signup(std::string name, std::string email, std::string pass);
 	PlayerDescription getPlayer(int id);
 	void displayDetails();
+	void logout();
 };
 

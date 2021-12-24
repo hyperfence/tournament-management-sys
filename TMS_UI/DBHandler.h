@@ -11,12 +11,16 @@
 #include "Player.h"
 #include "Invitation.h"
 #include "Game.h"
-#include "Tournament.h"
 #include "Match.h"
+#include "Tournament.h"
 
 class DBHandler
 {
 private:
+	/*static std::string db_host;
+	static std::string db_user;
+	static std::string db_pass;
+	static std::string db_name;*/
 	std::string db_host;
 	std::string db_user;
 	std::string db_pass;
@@ -39,6 +43,7 @@ public:
 		related functionality
 	*/
 	static TeamDescription getTeam(int teamId);
+	static bool createTeamDB(int playerId, std::string name, int totalPlayers);
 	/*
 		The following methods handle the Players's DB
 		related functionality
@@ -53,7 +58,8 @@ public:
 		related functionality
 	*/
 	//InviteList* getInvites(int playerId);
-	static bool sendInvite(int senderId, int receiverId, int teamId);
+	static bool getInvitesDB(int playerId, InviteList*& list, int* count);
+	static bool sendInvite(int senderId, std::string receiverEmail, int teamId);
 	static bool updateInvite(int inviteId, int action); // Action 0 = Rejected && Action 1 = Accepted
 	/*
 		The following methods handle Game's DB
@@ -65,7 +71,8 @@ public:
 		related functionality
 	*/
 	static bool getMatchDB(int id, MatchDescription* match);
-	static bool addMatchDB(int team_1, int team_2, int game_id, int tournament_id, std::string date, int* matchId);
+	static bool addMatchDB(int team_1, int team_2, int tournament_id, std::string date, int* matchId);
+	static bool updateMatchInfo(int id, int score, int winnerId, int loserId, std::string status);
 	static bool mapMatchDB(int tournament_id, int match_id);
 	static bool removeMatchDB(int id);
 	/*
@@ -74,6 +81,8 @@ public:
 	*/
 	static bool getTournamentDB(int id, TournamentDescription* tournament);
 	static bool removeTournamentDB(int id);
-	static bool addTournamentDB(std::string name, std::string prize, int totalTeams, int* tournamentId);
+	static bool addTournamentDB(std::string name, std::string prize, int game_id, int totalTeams, int organizerId, int* tournamentId);
+
+	static bool getLastInsertID(int* id);
 	~DBHandler();
 };

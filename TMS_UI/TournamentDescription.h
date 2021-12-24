@@ -7,4 +7,5 @@ struct TournamentDescription
 	std::string prize;
 	std::string name;
 	int totalTeams;
+	int gameId;
 };

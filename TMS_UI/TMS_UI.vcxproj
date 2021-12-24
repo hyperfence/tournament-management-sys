@@ -132,6 +132,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameDescription.h" />
     <ClInclude Include="Invitation.h" />
+    <ClInclude Include="InviteList.h" />
     <ClInclude Include="Match.h" />
     <ClInclude Include="MatchDescription.h" />
     <ClInclude Include="Player.h" />

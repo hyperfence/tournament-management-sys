@@ -4,13 +4,11 @@ Game::Game()
 {
 	this->game.id = 0;
 	this->game.name = "";
-	this->game.category = "";
 }
-Game::Game(int id, std::string name, std::string category)
+Game::Game(int id, std::string name)
 {
 	this->game.id = id;
 	this->game.name = name;
-	this->game.category = category;
 }
 GameDescription Game::getGame(int id)
 {

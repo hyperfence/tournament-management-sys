@@ -6,9 +6,9 @@
 struct TeamDescription
 {
 	int id;
-	int leadID;
+	int leadId;
 	std::string name;
 	int totalPlayers;
-	std::vector <int> playerIDs;
+	std::vector <int> playerIds;
 };
 
